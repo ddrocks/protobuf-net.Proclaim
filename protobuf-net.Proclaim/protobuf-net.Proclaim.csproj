@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp2.1;netstandard2.0;net45</TargetFrameworks>
+    <RootNamespace>ProtoBuf.Extensions</RootNamespace>
+    <Authors>ddrocks</Authors>
+    <Company>DHQ IT Solutions Inc.</Company>
+    <Description>Proclaim your class dependency to your base type or interface on your class implementation.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+	  <Version>1.0.0</Version>
+	  <PackageProjectUrl>https://github.com/ddrocks/protobuf-net.Proclaim</PackageProjectUrl>
+	  <PackageId>protobuf-net.Proclaim</PackageId>
+	  <Product>protobuf-net.Proclaim</Product>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>C:\Projects\protobuf-net.extensions\protobuf-net.Proclaim\protobuf-net.Proclaim.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="protobuf-net" Version="2.4.6" />
+  </ItemGroup>
+
+</Project>

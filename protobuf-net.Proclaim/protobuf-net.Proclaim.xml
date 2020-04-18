@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>protobuf-net.Proclaim</name>
+    </assembly>
+    <members>
+        <member name="T:ProtoBuf.Extensions.ExtensionProclaims">
+            <summary>
+            RuntimeTypeModel extension
+            </summary>
+        </member>
+        <member name="M:ProtoBuf.Extensions.ExtensionProclaims.ApplyProclaims(ProtoBuf.Meta.RuntimeTypeModel,ProtoBuf.ImplicitFields)">
+            <summary>
+            Apply include mappings via assembly reflection (<see cref="T:ProtoBuf.Extensions.ProtoProclaimAttribute"/>).<br />
+            Important: This must be called before any serialization happen.
+            </summary>
+            <param name="model">The RuntimeTypeModel</param>
+            <param name="implicitFields">The default import of base type fields, if nothing is specified.</param>
+            <exception cref="T:System.ArgumentException"></exception>
+            <exception cref="T:System.IO.InvalidDataException"></exception>
+        </member>
+        <member name="M:ProtoBuf.Extensions.ExtensionProclaims.ApplyProclaims(ProtoBuf.Meta.RuntimeTypeModel,System.Text.RegularExpressions.Regex,ProtoBuf.ImplicitFields)">
+            <summary>
+            Apply include mappings via assembly reflection (<see cref="T:ProtoBuf.Extensions.ProtoProclaimAttribute"/>).<br />
+            Important: This must be called before any serialization happen.
+            </summary>
+            <param name="model">The RuntimeTypeModel</param>
+            <param name="assemblyRegexFilter">The regex assembly filer</param>
+            <param name="implicitFields">The default import of base type fields, if nothing is specified.</param>
+            <exception cref="T:System.ArgumentException"></exception>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.IO.InvalidDataException"></exception>
+        </member>
+        <member name="M:ProtoBuf.Extensions.ExtensionProclaims.ApplyProclaims(ProtoBuf.Meta.RuntimeTypeModel,System.Func{System.Reflection.Assembly,System.Boolean},ProtoBuf.ImplicitFields)">
+            <summary>
+            Apply include mappings via assembly reflection (<see cref="T:ProtoBuf.Extensions.ProtoProclaimAttribute"/>).<br />
+            Important: This must be called before any serialization happen.
+            </summary>
+            <param name="model">The RuntimeTypeModel</param>
+            <param name="assemblyFilter">The custom assembly filter</param>
+            <param name="implicitFields">The default import of base type fields, if nothing is specified.</param>
+            <exception cref="T:System.ArgumentException"></exception>
+            <exception cref="T:System.IO.InvalidDataException"></exception>
+        </member>
+        <member name="T:ProtoBuf.Extensions.ProtoProclaimAttribute">
+            <summary>
+            Proclaim a type to the base class or interface
+            </summary>
+        </member>
+        <member name="P:ProtoBuf.Extensions.ProtoProclaimAttribute.InterfaceType">
+            <summary>
+            The interface type being used to add this subtype.<br />
+            ONLY being used if type is not derived form another class.
+            </summary>
+        </member>
+        <member name="P:ProtoBuf.Extensions.ProtoProclaimAttribute.ConcreteType">
+            <summary>
+            A defined concrete type to use
+            </summary>
+        </member>
+        <member name="P:ProtoBuf.Extensions.ProtoProclaimAttribute.FieldNumber">
+            <summary>
+            The field number to reference this subtype.
+            </summary>
+        </member>
+        <member name="M:ProtoBuf.Extensions.ProtoProclaimAttribute.#ctor(System.Int32)">
+            <summary>
+            Adds this type as a subtype to the base type
+            </summary>
+            <param name="fieldNumber"></param>
+        </member>
+        <member name="M:ProtoBuf.Extensions.ProtoProclaimAttribute.#ctor(System.Int32,System.Type)">
+            <summary>
+            Create a link to the concrete derived type on the base type.<br />
+            Note: you cannot add multiple base type to one concrete type of this class.
+            </summary>
+            <param name="fieldNumber"></param>
+            <param name="concreteType"></param>
+        </member>
+    </members>
+</doc>
