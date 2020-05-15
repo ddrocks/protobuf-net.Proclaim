@@ -6,7 +6,7 @@ An extension to add functionality to define base type includes on derived classe
 
 You can use the following command in the Package Manager Console:
 ```ps
-Install-Package protobuf-net.IncludeExtension
+Install-Package protobuf-net.Proclaim
 ```
 
 ## Basic usage
